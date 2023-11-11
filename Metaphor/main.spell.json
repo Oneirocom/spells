@@ -1,0 +1,449 @@
+{
+    "id": "46679217-f161-4f6d-ba5a-20abcd2ed6a7",
+    "name": "main",
+    "projectId": "cljeexdcf000rmb08zx08ai3e",
+    "hash": "ceed3bfd6a15f85a543c546867f3067d",
+    "createdAt": "1698614054233",
+    "updatedAt": "1698614968553",
+    "graph": {
+        "id": "demo@0.1.0",
+        "nodes": {
+            "524": {
+                "id": 524,
+                "data": {
+                    "log": false,
+                    "name": "Input - Default",
+                    "isInput": true,
+                    "success": false,
+                    "inputName": "Default",
+                    "socketKey": "5bd194d8-0cb0-4f2f-aaec-f706e941b300"
+                },
+                "inputs": {},
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 528,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 528,
+                                "input": "object",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 529,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -802.4208237183236,
+                    126.13006050809787
+                ],
+                "name": "Input"
+            },
+            "525": {
+                "id": 525,
+                "data": {
+                    "log": false,
+                    "name": "Output - Default",
+                    "success": false,
+                    "isOutput": true,
+                    "socketKey": "4495a612-83a1-4dc8-8868-baaecd23c6ff",
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 529,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 529,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": []
+                    },
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    951.9573818875854,
+                    168.75972775771368
+                ],
+                "name": "Output"
+            },
+            "526": {
+                "id": 526,
+                "data": {
+                    "log": false,
+                    "success": false,
+                    "threshold": "0.2"
+                },
+                "inputs": {
+                    "threshold": {
+                        "connections": []
+                    },
+                    "embedding": {
+                        "connections": [
+                            {
+                                "node": 527,
+                                "output": "embedding",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 527,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 530,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 530,
+                                "input": "intent",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    112.57229484441811,
+                    105.13823509741144
+                ],
+                "name": "Intent Search"
+            },
+            "527": {
+                "id": 527,
+                "data": {
+                    "log": false,
+                    "model": "text-embedding-ada-002",
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 528,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 528,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 526,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "embedding": {
+                        "connections": [
+                            {
+                                "node": 526,
+                                "input": "embedding",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -193.0234219054484,
+                    107.49818151182885
+                ],
+                "name": "Create Text Embedding"
+            },
+            "528": {
+                "id": 528,
+                "data": {
+                    "log": false,
+                    "outputs": [
+                        {
+                            "name": "content",
+                            "taskType": "output",
+                            "socketKey": "content",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 524,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "object": {
+                        "connections": [
+                            {
+                                "node": 524,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "content": {
+                        "connections": [
+                            {
+                                "node": 527,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 527,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -495.47813749327025,
+                    90.72571296219259
+                ],
+                "name": "Get Values From Object"
+            },
+            "529": {
+                "id": 529,
+                "data": {
+                    "log": false,
+                    "error": false,
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 530,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "spellName": {
+                        "connections": [
+                            {
+                                "node": 530,
+                                "output": "prompt",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": [
+                            {
+                                "node": 524,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 525,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 525,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    666.9353879633043,
+                    173.35611821904058
+                ],
+                "name": "Spell By Name"
+            },
+            "530": {
+                "id": 530,
+                "data": {
+                    "log": false,
+                    "inputs": [
+                        {
+                            "name": "intent",
+                            "taskType": "output",
+                            "socketKey": "intent",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "fewshot": "subspell_{{intent}}",
+                    "success": false
+                },
+                "inputs": {
+                    "intent": {
+                        "connections": [
+                            {
+                                "node": 526,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 526,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 529,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "prompt": {
+                        "connections": [
+                            {
+                                "node": 529,
+                                "input": "spellName",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    393.4317457841976,
+                    154.8315902289047
+                ],
+                "name": "Text Template"
+            }
+        },
+        "comments": []
+    }
+}
