@@ -1,0 +1,105 @@
+{
+    "id": "755cbd11-8f18-4197-b5d4-851f79ebd839",
+    "name": "Jeeves prompting",
+    "projectId": "clnc3fkdm0003l308upyb4gke",
+    "hash": "26374dd21d53297807f546d9e75b5098",
+    "createdAt": "1699302928050",
+    "updatedAt": "1699306253251",
+    "graph": {
+        "id": "demo@0.1.0",
+        "nodes": {
+            "524": {
+                "id": 524,
+                "data": {
+                    "log": false,
+                    "name": "Input - Default",
+                    "isInput": true,
+                    "inputName": "Default",
+                    "socketKey": "5bd194d8-0cb0-4f2f-aaec-f706e941b300"
+                },
+                "inputs": {},
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 525,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 525,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -363.77777777777777,
+                    -64.72222222222223
+                ],
+                "name": "Input"
+            },
+            "525": {
+                "id": 525,
+                "data": {
+                    "log": false,
+                    "name": "Output - Subspell",
+                    "isOutput": true,
+                    "socketKey": "4495a612-83a1-4dc8-8868-baaecd23c6ff",
+                    "outputType": "Subspell",
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 524,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 524,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": []
+                    },
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    271.55555555555554,
+                    -88.61111111111111
+                ],
+                "name": "Output"
+            }
+        },
+        "comments": []
+    }
+}

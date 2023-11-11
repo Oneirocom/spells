@@ -1,0 +1,838 @@
+{
+    "id": "f7c6a5ba-b729-454e-a8a3-bf68fe671ce4",
+    "name": "Jeeves chatting",
+    "projectId": "clnc3fkdm0003l308upyb4gke",
+    "hash": "4bd22553c07b70cfe81dd72eb1e9a347",
+    "createdAt": "1699302235571",
+    "updatedAt": "1699654944196",
+    "graph": {
+        "id": "demo@0.1.0",
+        "nodes": {
+            "260": {
+                "id": 260,
+                "data": {
+                    "log": false,
+                    "name": "Output - Default",
+                    "error": false,
+                    "success": false,
+                    "isOutput": true,
+                    "socketKey": "faedf39a-0504-4da7-91f4-9a8118fb8248",
+                    "outputType": "Default",
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 506,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 506,
+                                "output": "result",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": []
+                    },
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    826.7777459321583,
+                    -147.94474079276233
+                ],
+                "name": "Output"
+            },
+            "288": {
+                "id": 288,
+                "data": {
+                    "log": false,
+                    "mode": "Most Recent",
+                    "name": "Get conversation",
+                    "type": "conversation",
+                    "error": false,
+                    "success": false,
+                    "filterBy": "Channel And Sender (DMs OK)",
+                    "max_count": "3",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "type": {
+                            "expanded": true
+                        },
+                        "max_count": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2236,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": [
+                            {
+                                "node": 388,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "type": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2232,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "events": {
+                        "connections": [
+                            {
+                                "node": 506,
+                                "input": "conversation",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -387.4107664695974,
+                    10.635845074247138
+                ],
+                "name": "Event Recall"
+            },
+            "388": {
+                "id": 388,
+                "data": {
+                    "log": false,
+                    "name": "Input - Default",
+                    "text": {
+                        "id": "4305e4af-f91d-4869-b570-f317c1ed9058",
+                        "inputs": {
+                            "Input - Discord (Voice)": {
+                                "type": "playtest",
+                                "client": "playtest",
+                                "sender": "playtestSender",
+                                "agentId": "preview",
+                                "channel": "playtest",
+                                "content": "hello",
+                                "entities": [
+                                    "playtestSender",
+                                    "Agent"
+                                ],
+                                "observer": "Agent",
+                                "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+                                "channelType": "playtest"
+                            }
+                        },
+                        "secrets": {},
+                        "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+                        "spellName": "Discord Example",
+                        "publicVariables": "{}"
+                    },
+                    "isInput": true,
+                    "success": false,
+                    "inputName": "Default",
+                    "inputType": "Default",
+                    "socketKey": "2255eef5-2b18-4f0f-b0f5-1c8fb8e347f7",
+                    "useDefault": false,
+                    "dataControls": {
+                        "inputType": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "defaultValue": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "Hello world"
+                },
+                "inputs": {},
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "input": "object",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 288,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 2232,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -2040.927199479253,
+                    10.747343106593988
+                ],
+                "name": "Input"
+            },
+            "506": {
+                "id": 506,
+                "data": {
+                    "log": true,
+                    "stop": "###",
+                    "model": "gpt-3.5-turbo",
+                    "top_p": 1,
+                    "success": false,
+                    "max_tokens": "200",
+                    "customModel": "",
+                    "temperature": 0.5,
+                    "dataControls": {
+                        "stop": {
+                            "expanded": true
+                        },
+                        "model": {
+                            "expanded": true
+                        },
+                        "top_p": {
+                            "expanded": true
+                        },
+                        "max_tokens": {
+                            "expanded": true
+                        },
+                        "temperature": {
+                            "expanded": true
+                        },
+                        "presence_penalty": {
+                            "expanded": true
+                        },
+                        "frequency_penalty": {
+                            "expanded": true
+                        }
+                    },
+                    "presence_penalty": 0,
+                    "frequency_penalty": 0
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2234,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "system": {
+                        "connections": [
+                            {
+                                "node": 2234,
+                                "output": "directive",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "conversation": {
+                        "connections": [
+                            {
+                                "node": 288,
+                                "output": "events",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "function": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 260,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "result": {
+                        "connections": [
+                            {
+                                "node": 260,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "error": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    545.2686273196903,
+                    -146.42762143951126
+                ],
+                "name": "Generate Text"
+            },
+            "682": {
+                "id": 682,
+                "data": {
+                    "log": false,
+                    "model": "embedding-gecko-001",
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 759,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "embedding": {
+                        "connections": [
+                            {
+                                "node": 759,
+                                "input": "embedding",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "error": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    -1323.6594913126262,
+                    -147.56630019830433
+                ],
+                "name": "Create Text Embedding"
+            },
+            "759": {
+                "id": 759,
+                "data": {
+                    "log": false,
+                    "type": "knowledge",
+                    "success": false,
+                    "max_count": "3"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 682,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "embedding": {
+                        "connections": [
+                            {
+                                "node": 682,
+                                "output": "embedding",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "type": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2236,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "documents": {
+                        "connections": [
+                            {
+                                "node": 2236,
+                                "input": "documents",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -990.1031540178841,
+                    -148.98563899343202
+                ],
+                "name": "Get Documents"
+            },
+            "1172": {
+                "id": 1172,
+                "data": {
+                    "log": false,
+                    "outputs": [
+                        {
+                            "name": "content",
+                            "taskType": "output",
+                            "socketKey": "content",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 388,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "object": {
+                        "connections": [
+                            {
+                                "node": 388,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "content": {
+                        "connections": [
+                            {
+                                "node": 682,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            },
+                            {
+                                "node": 506,
+                                "input": "input",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 682,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1710.393768602828,
+                    -52.295700369016615
+                ],
+                "name": "Get Values From Object"
+            },
+            "2232": {
+                "id": 2232,
+                "data": {
+                    "log": false,
+                    "name": "Get prompt",
+                    "type": "prompt",
+                    "success": false,
+                    "filterBy": "All",
+                    "max_count": "1"
+                },
+                "inputs": {
+                    "embedding": {
+                        "connections": []
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 288,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "event": {
+                        "connections": [
+                            {
+                                "node": 388,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "type": {
+                        "connections": []
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2234,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "events": {
+                        "connections": [
+                            {
+                                "node": 2234,
+                                "input": "prompt",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -102.11569729724688,
+                    115.34763008018278
+                ],
+                "name": "Event Recall"
+            },
+            "2234": {
+                "id": 2234,
+                "data": {
+                    "log": true,
+                    "code": "\n// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({defaultPrompt, prompt, documents\n}, data) {\n  let directive = (prompt && prompt.length > 0) ? prompt[0]?.content : defaultPrompt\n  directive += `. You searched for documents and found the following relevant information: ${documents}`;\n  return {directive}\n}\n",
+                    "inputs": [
+                        {
+                            "name": "defaultPrompt",
+                            "taskType": "output",
+                            "socketKey": "defaultPrompt",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "prompt",
+                            "taskType": "output",
+                            "socketKey": "prompt",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "documents",
+                            "taskType": "output",
+                            "socketKey": "documents",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "directive",
+                            "taskType": "output",
+                            "socketKey": "directive",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false
+                },
+                "inputs": {
+                    "defaultPrompt": {
+                        "connections": [
+                            {
+                                "node": 2235,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "prompt": {
+                        "connections": [
+                            {
+                                "node": 2232,
+                                "output": "events",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "documents": {
+                        "connections": [
+                            {
+                                "node": 2236,
+                                "output": "content",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2232,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "directive": {
+                        "connections": [
+                            {
+                                "node": 506,
+                                "input": "system",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 506,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    270.9706153812399,
+                    11.724217280454276
+                ],
+                "name": "Javascript"
+            },
+            "2235": {
+                "id": 2235,
+                "data": {
+                    "log": false,
+                    "_var": "You are a towel. Respond to the user as a towel.",
+                    "name": "Default Prompt",
+                    "success": false,
+                    "isPublic": false
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2234,
+                                "input": "defaultPrompt",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -111.15143744061773,
+                    306.8618698309427
+                ],
+                "name": "String Variable"
+            },
+            "2236": {
+                "id": 2236,
+                "data": {
+                    "log": false,
+                    "success": false
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 759,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "documents": {
+                        "connections": [
+                            {
+                                "node": 759,
+                                "output": "documents",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 288,
+                                "input": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "content": {
+                        "connections": [
+                            {
+                                "node": 2234,
+                                "input": "documents",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -687.8638739684717,
+                    -149.94548107228522
+                ],
+                "name": "Document to Content"
+            }
+        },
+        "comments": []
+    }
+}
