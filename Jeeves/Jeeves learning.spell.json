@@ -1,10 +1,13 @@
 {
-    "id": "b384d1ff-be30-4bce-8c13-4c16782b82ea",
+    "id": "8d12def2-15e3-4761-91da-dad0da919bfc",
     "name": "Jeeves learning",
-    "projectId": "clnc3fkdm0003l308upyb4gke",
-    "hash": "64510a28655418a110b53a27ea5079f2",
-    "createdAt": "1699640205187",
-    "updatedAt": "1700679258490",
+    "projectId": "clq1c43he0003ie08wbwqbp0t",
+    "hash": "3b4e4abd3165999bd943912d0bcf5df3",
+    "createdAt": "1702324672490",
+    "updatedAt": "1702324766173",
+    "creatorId": null,
+    "type": null,
+    "spellReleaseId": null,
     "graph": {
         "id": "demo@0.1.0",
         "nodes": {
@@ -12,10 +15,11 @@
                 "id": 524,
                 "data": {
                     "log": false,
-                    "name": "Input - Default",
+                    "name": "Input - Subspell",
                     "isInput": true,
                     "success": false,
                     "inputName": "Default",
+                    "inputType": "Subspell",
                     "socketKey": "5bd194d8-0cb0-4f2f-aaec-f706e941b300",
                     "hideSocket": true
                 },
@@ -52,62 +56,10 @@
                     }
                 },
                 "position": [
-                    -407.1066469541581,
-                    -237.79033356322466
+                    -410.5805334720365,
+                    -239.52718141193267
                 ],
                 "name": "Input"
-            },
-            "525": {
-                "id": 525,
-                "data": {
-                    "log": true,
-                    "name": "Output - Subspell",
-                    "success": false,
-                    "isOutput": true,
-                    "socketKey": "4495a612-83a1-4dc8-8868-baaecd23c6ff",
-                    "outputType": "Subspell",
-                    "sendToPlaytest": true
-                },
-                "inputs": {
-                    "trigger": {
-                        "connections": [
-                            {
-                                "node": 3164,
-                                "output": "trigger",
-                                "data": {
-                                    "hello": "hello"
-                                }
-                            }
-                        ]
-                    },
-                    "input": {
-                        "connections": [
-                            {
-                                "node": 3164,
-                                "output": "output",
-                                "data": {
-                                    "hello": "hello"
-                                }
-                            }
-                        ]
-                    },
-                    "event": {
-                        "connections": []
-                    }
-                },
-                "outputs": {
-                    "trigger": {
-                        "connections": []
-                    },
-                    "output": {
-                        "connections": []
-                    }
-                },
-                "position": [
-                    2993.170455753429,
-                    -90.45730753048676
-                ],
-                "name": "Output"
             },
             "2443": {
                 "id": 2443,
@@ -250,7 +202,7 @@
                 },
                 "position": [
                     176.94465827151035,
-                    -102.79523601682118
+                    -106.79523601682118
                 ],
                 "name": "Javascript"
             },
@@ -373,7 +325,7 @@
             "2763": {
                 "id": 2763,
                 "data": {
-                    "log": false,
+                    "log": true,
                     "type": "knowledge",
                     "success": false
                 },
@@ -432,7 +384,7 @@
                     }
                 },
                 "position": [
-                    1396.1944888110625,
+                    1395.1573791433088,
                     65.8970733240039
                 ],
                 "name": "Store Documents"
@@ -621,15 +573,15 @@
                     "content": {
                         "connections": [
                             {
-                                "node": 3436,
-                                "input": "input",
+                                "node": 2763,
+                                "input": "content",
                                 "data": {
                                     "hello": "hello"
                                 }
                             },
                             {
-                                "node": 2763,
-                                "input": "content",
+                                "node": 3436,
+                                "input": "input",
                                 "data": {
                                     "hello": "hello"
                                 }
@@ -649,8 +601,8 @@
                     }
                 },
                 "position": [
-                    793.6131647309115,
-                    65.98527104295344
+                    787.0950932741879,
+                    49.690181912960746
                 ],
                 "name": "Get Values From Object"
             },
@@ -928,8 +880,8 @@
                     }
                 },
                 "position": [
-                    2344.8477507541234,
-                    147.0851516453598
+                    2352.47361048032,
+                    140.4125243849377
                 ],
                 "name": "Echo"
             },
@@ -1079,7 +1031,7 @@
                     "trigger": {
                         "connections": [
                             {
-                                "node": 525,
+                                "node": 5812,
                                 "input": "trigger",
                                 "data": {
                                     "hello": "hello"
@@ -1090,7 +1042,7 @@
                     "output": {
                         "connections": [
                             {
-                                "node": 525,
+                                "node": 5812,
                                 "input": "input",
                                 "data": {
                                     "hello": "hello"
@@ -1138,7 +1090,8 @@
                 "id": 3436,
                 "data": {
                     "log": true,
-                    "model": "text-embedding-ada-002"
+                    "model": "text-embedding-ada-002",
+                    "success": false
                 },
                 "inputs": {
                     "trigger": {
@@ -1189,10 +1142,51 @@
                     }
                 },
                 "position": [
-                    1082.4525699728617,
-                    20.142588818398337
+                    1098.7476666997488,
+                    170.0578994114927
                 ],
                 "name": "Create Text Embedding"
+            },
+            "5812": {
+                "id": 5812,
+                "data": {
+                    "log": false,
+                    "name": "output",
+                    "success": false,
+                    "isOutput": true,
+                    "socketKey": "8748d983-c30a-4af6-bcad-84d114cd1d30",
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 3164,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 3164,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {},
+                "position": [
+                    2990.408457132388,
+                    -89.19615357208458
+                ],
+                "name": "Socket Output"
             }
         },
         "comments": []

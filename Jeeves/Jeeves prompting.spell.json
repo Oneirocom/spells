@@ -1,10 +1,13 @@
 {
-    "id": "755cbd11-8f18-4197-b5d4-851f79ebd839",
+    "id": "087ab512-b38e-42cd-82f6-f9ff24bceb71",
     "name": "Jeeves prompting",
-    "projectId": "clnc3fkdm0003l308upyb4gke",
-    "hash": "34f9dac18f4a0706fbc41d6b05ab4bf5",
-    "createdAt": "1699302928050",
-    "updatedAt": "1700681207242",
+    "projectId": "clq1c43he0003ie08wbwqbp0t",
+    "hash": "cf7001f7fec4e4f4c1ab6f59cca67d56",
+    "createdAt": "1702324638184",
+    "updatedAt": "1702421640363",
+    "creatorId": null,
+    "type": "spell",
+    "spellReleaseId": null,
     "graph": {
         "id": "demo@0.1.0",
         "nodes": {
@@ -12,9 +15,10 @@
                 "id": 524,
                 "data": {
                     "log": false,
-                    "name": "Input - Default",
+                    "name": "Input - Subspell",
                     "isInput": true,
                     "inputName": "Default",
+                    "inputType": "Subspell",
                     "socketKey": "5bd194d8-0cb0-4f2f-aaec-f706e941b300",
                     "hideSocket": true
                 },
@@ -34,78 +38,27 @@
                     "output": {
                         "connections": [
                             {
-                                "node": 3899,
-                                "input": "event",
-                                "data": {
-                                    "hello": "hello"
-                                }
-                            },
-                            {
                                 "node": 3996,
                                 "input": "source",
                                 "data": {
                                     "hello": "hello"
                                 }
+                            },
+                            {
+                                "node": 3899,
+                                "input": "event",
+                                "data": {
+                                    "hello": "hello"
+                                }
                             }
                         ]
                     }
                 },
                 "position": [
-                    -403.5268955778239,
+                    -405.32562501025143,
                     -124.07758158342193
                 ],
                 "name": "Input"
-            },
-            "525": {
-                "id": 525,
-                "data": {
-                    "log": false,
-                    "name": "Output - Subspell",
-                    "isOutput": true,
-                    "socketKey": "4495a612-83a1-4dc8-8868-baaecd23c6ff",
-                    "outputType": "Subspell",
-                    "sendToPlaytest": true
-                },
-                "inputs": {
-                    "trigger": {
-                        "connections": [
-                            {
-                                "node": 4152,
-                                "output": "trigger",
-                                "data": {
-                                    "hello": "hello"
-                                }
-                            }
-                        ]
-                    },
-                    "input": {
-                        "connections": [
-                            {
-                                "node": 4152,
-                                "output": "output",
-                                "data": {
-                                    "hello": "hello"
-                                }
-                            }
-                        ]
-                    },
-                    "event": {
-                        "connections": []
-                    }
-                },
-                "outputs": {
-                    "trigger": {
-                        "connections": []
-                    },
-                    "output": {
-                        "connections": []
-                    }
-                },
-                "position": [
-                    2698.962237546598,
-                    10.213747195455396
-                ],
-                "name": "Output"
             },
             "3899": {
                 "id": 3899,
@@ -167,7 +120,7 @@
                     }
                 },
                 "position": [
-                    -66.04523468037401,
+                    -68.26752457814712,
                     12.595386281264096
                 ],
                 "name": "Event Recall"
@@ -475,8 +428,8 @@
                     }
                 },
                 "position": [
-                    1272.1231082310521,
-                    -250.17752464973245
+                    1276.3045088910715,
+                    -252.26822497974214
                 ],
                 "name": "Store Event"
             },
@@ -503,8 +456,8 @@
                     }
                 },
                 "position": [
-                    995.8361026556793,
-                    -299.4363056740043
+                    981.0642138405965,
+                    -295.2547856633234
                 ],
                 "name": "String Variable"
             },
@@ -593,7 +546,7 @@
                     "trigger": {
                         "connections": [
                             {
-                                "node": 525,
+                                "node": 5804,
                                 "input": "trigger",
                                 "data": {
                                     "hello": "hello"
@@ -604,7 +557,7 @@
                     "output": {
                         "connections": [
                             {
-                                "node": 525,
+                                "node": 5804,
                                 "input": "input",
                                 "data": {
                                     "hello": "hello"
@@ -769,8 +722,8 @@
                     }
                 },
                 "position": [
-                    835.9240240266738,
-                    222.1222748392795
+                    840.5666181366319,
+                    226.7649539597501
                 ],
                 "name": "Get Values From Object"
             },
@@ -835,8 +788,8 @@
                     }
                 },
                 "position": [
-                    1154.928035823212,
-                    217.8056466517386
+                    1159.574150295884,
+                    227.09787559708283
                 ],
                 "name": "Store Event"
             },
@@ -967,7 +920,7 @@
                     }
                 },
                 "position": [
-                    1773.4338087167455,
+                    1771.7861764841355,
                     232.50251151186734
                 ],
                 "name": "Store Event"
@@ -1114,6 +1067,46 @@
                     454.83627498523674
                 ],
                 "name": "String Variable"
+            },
+            "5804": {
+                "id": 5804,
+                "data": {
+                    "log": false,
+                    "name": "output",
+                    "isOutput": true,
+                    "socketKey": "6ab3f936-9e27-47bd-b3cb-6caf59263348",
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 4152,
+                                "output": "trigger",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 4152,
+                                "output": "output",
+                                "data": {
+                                    "hello": "hello"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {},
+                "position": [
+                    2722.5411354103753,
+                    13.814988872481422
+                ],
+                "name": "Socket Output"
             }
         },
         "comments": []
