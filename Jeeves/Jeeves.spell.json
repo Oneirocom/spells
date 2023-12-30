@@ -2,9 +2,9 @@
     "id": "b815e6db-c615-40e6-a509-efd2ccf87328",
     "name": "Jeeves",
     "projectId": "clq1c43he0003ie08wbwqbp0t",
-    "hash": "40a83e453876c4d97faaf213b07c853a",
+    "hash": "4a22cff91358a6d83c9dbd9cd2791e8e",
     "createdAt": "2023-12-15T01:18:38.828Z",
-    "updatedAt": "1703201408798",
+    "updatedAt": "1703908154306",
     "creatorId": null,
     "type": "spell",
     "spellReleaseId": null,
@@ -730,13 +730,6 @@
                                 "data": {
                                     "hello": "hello"
                                 }
-                            },
-                            {
-                                "node": 5964,
-                                "output": "false",
-                                "data": {
-                                    "hello": "hello"
-                                }
                             }
                         ]
                     },
@@ -1332,7 +1325,7 @@
             "5567": {
                 "id": 5567,
                 "data": {
-                    "log": true,
+                    "log": false,
                     "name": "Jeeves chatting",
                     "error": false,
                     "graph": {
@@ -5125,15 +5118,7 @@
                         ]
                     },
                     "false": {
-                        "connections": [
-                            {
-                                "node": 1040,
-                                "input": "trigger",
-                                "data": {
-                                    "hello": "hello"
-                                }
-                            }
-                        ]
+                        "connections": []
                     }
                 },
                 "position": [
